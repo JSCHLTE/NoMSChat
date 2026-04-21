@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Remove Methstreams Chat",
+    "version": "1.0",
+    "description": "Toggle meth and crack streams chat",
+    "permissions": ["storage", "tabs"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.methstreams.ms/*", "*://*.crackstreams.ms/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
